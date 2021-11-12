@@ -14,7 +14,7 @@ def mp3(request):
         url = str(request.POST.get("videourl"))
         id = video_id_deu(url)
         print(id)
-        framecode = f"""<iframe src="https://www.yt-download.org/api/button/mp3/{id}"""
+        framecode = f"""<iframe src="https://www.yt-download.org/api/widget/mp3/{id}" width="100%" height="100%" allowtransparency="true" scrolling="no" style="border:none"></iframe>"""
 
         return render(
             request, template_name="download.html", context={"framecode": framecode}

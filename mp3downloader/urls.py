@@ -1,7 +1,8 @@
 from django.urls import path
 
-from .views import mp3
+from .views import AudioView, HomeView
 
 urlpatterns = [
-    path("", mp3, name="homepage"),
+    path("", HomeView.as_view(), name="home"),
+    path("mp3", AudioView, name="audio_listing"),
 ]

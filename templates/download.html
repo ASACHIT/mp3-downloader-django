@@ -1,26 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Download Audio</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <h1>Download Audio</h1>
 
-    {{framecode | safe}}
+    <div class="iframe_container">
+      <iframe
+        src="https://www.yt-download.org/api/widget/mp3/{{ id }}"
+        width="100%"
+        height="100%"
+        allowtransparency="true"
+        scrolling="yes"
+        style="border: none"
+      ></iframe>
+    </div>
+
     <style>
-        h1 {
-            text-align: center;
-        }
+      h1 {
+        text-align: center;
+      }
+      .iframe_container {
+        height: 500px;
+      }
 
-        body {
-            font-family: sans-serif;
-        }
+      body {
+        font-family: sans-serif;
+      }
     </style>
-</body>
-
+  </body>
 </html>
